@@ -21,3 +21,8 @@ You can use the following convenience methods to load the relevant domain object
 `$c(3145149);` will load the Sprint 3c (Customer) object with the customer ID of 3145149.
 
 `$i(1234);` will load the Inventory object with the inventory ID of 1234.
+
+`$o(2795383);` will load the Order object with the order ID of 2795383.
+
+`$oByC(3145149);` will load an array containing all Order objects associated with the customer ID of 3145149.
+
