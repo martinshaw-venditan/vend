@@ -20,6 +20,7 @@ $onStartLines = array(
 
     "require_once('/app/vc-local/custom/admin_html/_shared.php');",
     "require_once('/app/vc-local/custom/config/base-config.php');",
+    "require_once('/app/vc-local/custom/config/app_and_db.php');",
 
 //    "Init::init_admin_index();",
 //    "SprintRegistry::get()->get_uow()->commit();",
