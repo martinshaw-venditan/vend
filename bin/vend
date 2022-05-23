@@ -11,10 +11,14 @@ if (count($argv) <> 2) {
     echo 'Need to provide an App ID (e.g. Sigma) as CLI argument when running vend' . PHP_EOL;
     exit(0);
 }
-$appId = $argv[1];
 
-$boris = new \Boris\Boris('vend on ' . gethostname() . ' using ' . $appId . ' > ');
-$boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
+$appId = $argv[1];
+$prompt = 'vend on ' . gethostname() . ' using ' . $appId . ' > ';
+
+$boris = new \Boris\Boris($prompt);
+
+$boris->setLocal('cust', function ($id) { return \DataFactory::get_sprint_3c_searcher()->find_by_id($id); });
+$boris->setLocal('inv', function ($id) { return \DataFactory::get_inventory_searcher()->find_by_id($id); });
 
 $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
 $_SERVER['REQUEST_URI'] = '/';
@@ -27,9 +31,6 @@ $boris->onStart(function($worker, $vars){
         'REMOTE_ADDR' => '127.0.0.1',
         'REQUEST_URI' => '/',
     ));
-
-    $worker->setLocal('cust', \DataFactory::get_sprint_3c_searcher()->find_by_id);
-    $worker->setLocal('inv', \DataFactory::get_inventory_searcher()->find_by_id);
 });
 
 
@@ -52,6 +53,8 @@ $onStartLines = array(
 foreach ($onStartLines as $onStartLine) {
     $boris->onStart($onStartLine);
 }
+
+$boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 
 $config = new \Boris\Config();
 $config->apply($boris);
