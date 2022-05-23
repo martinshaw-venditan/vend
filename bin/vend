@@ -3,6 +3,7 @@
 
 require_once __DIR__ . '/../lib/autoload.php';
 
+// Error handling / validation
 if (!function_exists('pcntl_signal')) {
     die("PCNTL support seems to be missing or disabled. See https://github.com/d11wtq/boris/issues/29 for details\n");
 }
@@ -12,37 +13,34 @@ if (count($argv) <> 2) {
     exit(0);
 }
 
+
 $appId = $argv[1];
 $prompt = 'vend on ' . gethostname() . ' using ' . $appId . ' > ';
 
 $boris = new \Boris\Boris($prompt);
 
-//$boris->onStart('echo "The date is $date\n";');
+// Constants and VC CLI requirements
 $onStartLines = array(
     "error_reporting(E_ALL);",
-//    "register_shutdown_function('nice_php_shutdown');",
-
-//    'define(\'DOCNET_APP_ID\', !empty($_SERVER[\'DEFAULT_APP_ID\']) ? $_SERVER[\'DEFAULT_APP_ID\'] : \'Central\');',
+    
     'define(\'DOCNET_APP_ID\', \'' . $appId . '\');',
-//    'define(\'DOCNET_APP_ID\', \'Sigma\');',
     "require_once('/app/vc-local/custom/admin_html/_shared.php');",
     "require_once('/app/vc-local/custom/config/base-config.php');",
     "require_once('/app/vc-local/custom/config/app_and_db.php');",
-
-//    "Init::init_admin_index();",
-//    "SprintRegistry::get()->get_uow()->commit();",
 );
-
 foreach ($onStartLines as $onStartLine) {
     $boris->onStart($onStartLine);
 }
 
+
+// Convenience methods for customers (3c) and inventory 
 $boris->onStart(function($worker, $vars){
-    // Convenience methods for customers (3c) and inventory 
     $worker->setLocal('c', function($id) { return \DataFactory::get_sprint_3c_searcher()->find_by_id($id); });
     $worker->setLocal('i', function($id) { return \DataFactory::get_inventory_searcher()->find_by_id($id); });
 });
 
+
+// Logic for emulating web-based requirements
 $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
 $_SERVER['REQUEST_URI'] = '/';
 $boris->setLocal('$_SERVER', array(
@@ -56,8 +54,12 @@ $boris->onStart(function($worker, $vars){
     ));
 });
 
+
+// Output formatting
 $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 
+
+// Bootstrapping Boris REPL CLI library
 $config = new \Boris\Config();
 $config->apply($boris);
 
