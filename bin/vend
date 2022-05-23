@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../lib/autoload.php';
 
 // Error handling / validation
 if (!function_exists('pcntl_signal')) {
@@ -22,7 +22,7 @@ $boris = new \Boris\Boris($prompt);
 // Constants and VC CLI requirements
 $onStartLines = array(
     "error_reporting(E_ALL);",
-
+    
     'define(\'DOCNET_APP_ID\', \'' . $appId . '\');',
     "require_once('/app/vc-local/custom/admin_html/_shared.php');",
     "require_once('/app/vc-local/custom/config/base-config.php');",
@@ -33,7 +33,7 @@ foreach ($onStartLines as $onStartLine) {
 }
 
 
-// Convenience methods for customers (3c) and inventory
+// Convenience methods for customers (3c) and inventory 
 $boris->onStart(function($worker, $vars){
     $worker->setLocal('c', function($id) { return \DataFactory::get_sprint_3c_searcher()->find_by_id($id); });
     $worker->setLocal('i', function($id) { return \DataFactory::get_inventory_searcher()->find_by_id($id); });
