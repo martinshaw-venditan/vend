@@ -1,64 +1,23 @@
-# Boris
+# Vend
 
-A tiny, but robust REPL for PHP.
+A Laravel Tinker-like REPL for the Venditan Commerce platform.
 
-[![Code Climate](https://codeclimate.com/github/borisrepl/boris/badges/gpa.svg)](https://codeclimate.com/github/borisrepl/boris)
-[![Build Status](https://travis-ci.org/borisrepl/boris.svg?branch=master)](https://travis-ci.org/borisrepl/boris)
+Currently, it's work in progress.
 
+## Installation
 
-> **Announcement:** I'm looking to add one or two additional collaborators with
-> commit access. If you are actively involved in open source and have a GitHub
-> profile for review, ping me on Twitter (@d11wtq) to express your interest.
-> Experienced developers with active GitHub projects only.
+1. Add changes from https://github.com/martinshaw-venditan/venditan-commerce/tree/feature/xxxxx/vend-concept into your project. For now as local changes.
 
-![Demo](http://dl.dropbox.com/u/508607/BorisDemo-v4.gif "Quick Demo")
+2. Run `composer require martinshaw-venditan/vend:dev-master` in the `venditan-commerce` directory. 
 
-Python has one. Ruby has one. Clojure has one. Now PHP has one, too. Boris is
-PHP's missing REPL (read-eval-print loop), allowing developers to experiment
-with PHP code in the terminal in an interactive manner.  If you make a mistake,
-it doesn't matter, Boris will report the error and stand to attention for
-further input.
+3. Run `composer run vend:sigma` within the `venditan-commerce` directory to use the Vend CLI with the local VC and as the Sigma App ID.
 
-Everything you enter into Boris is evaluated and the result inspected so you
-can understand what is happening.  State is maintained between inputs, allowing
-you to gradually build up a solution to a problem.
+If you would like to use the CLI with a different app ID, add an appropriate entry in the VC `composer.json` scripts section, following the convention of `"vend:sigma": "docker exec -it vc_app_1 bash -c \"/app/vc-local/custom/vendor/bin/vend Sigma\" < /dev/tty"`.
 
-> __Note:__ The PCNTL function which is required to run Boris is not available on Windows platforms.
+## Convenience methods
 
-## Why?
+You can use the following convenience methods to load the relevant domain objects...
 
-I'm in the process of transitioning away from PHP to Ruby.  I have come to find
-PHP's lack of a real REPL to be frustrating and was not able to find an existing
-implementation that was complete.  Boris weighs in at a few hundred lines of
-fairly straightforward code.
+`$c(3145149);` will load the Sprint 3c (Customer) object with the customer ID of 3145149.
 
-
-## Usage
-
-Check out our wonderful [wiki] for usage instructions.
-
-
-## Contributing
-
-We're committed to a loosely-coupled architecture for Boris and would love to get your contributions.
-
-Before jumping in, check out our **[Contributing] [contributing]** page on the wiki!
-
-## Contributing
-
-We're using [PHPUnit](https://phpunit.de/) for testing. To run all the tests,
-
-    phpunit --bootstrap tests/autoload.php -c tests.xml
-
-## Core Team
-
-This module was originally developed by [Chris Corbyn](https://github.com/d11wtq), and is now maintained by [Tejas Manohar](https://github.com/tejasmanohar), [Dennis Hotson](https://github.com/dhotson), and [other wonderful contributors](https://github.com/borisrepl/boris/graphs/contributors).
-
-## Copyright & Licensing
-
-See the [LICENSE] file for details.
-
-[LICENSE]: https://github.com/borisrepl/boris/blob/master/LICENSE
-[wiki]: https://github.com/borisrepl/boris/wiki
-[contributing]: https://github.com/borisrepl/boris/blob/master/CONTRIBUTING.md
-[Chris Corbyn]: https://github.com/borisrepl
+`$i(1234);` will load the Inventory object with the inventory ID of 1234.
