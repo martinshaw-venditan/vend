@@ -2,7 +2,7 @@
 
 A Laravel Tinker-like REPL for the Venditan Commerce platform.
 
-Currently, it's work in progress.
+Currently, it's work in progress, anyone in the Venditan group is welcome to contribute.
 
 ## Installation
 
