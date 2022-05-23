@@ -17,23 +17,6 @@ $prompt = 'vend on ' . gethostname() . ' using ' . $appId . ' > ';
 
 $boris = new \Boris\Boris($prompt);
 
-$boris->setLocal('cust', function ($id) { return \DataFactory::get_sprint_3c_searcher()->find_by_id($id); });
-$boris->setLocal('inv', function ($id) { return \DataFactory::get_inventory_searcher()->find_by_id($id); });
-
-$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-$_SERVER['REQUEST_URI'] = '/';
-$boris->setLocal('$_SERVER', array(
-    'REMOTE_ADDR' => '127.0.0.1',
-    'REQUEST_URI' => '/',
-));
-$boris->onStart(function($worker, $vars){
-    $worker->setLocal('$_SERVER', array(
-        'REMOTE_ADDR' => '127.0.0.1',
-        'REQUEST_URI' => '/',
-    ));
-});
-
-
 //$boris->onStart('echo "The date is $date\n";');
 $onStartLines = array(
     "error_reporting(E_ALL);",
@@ -53,6 +36,22 @@ $onStartLines = array(
 foreach ($onStartLines as $onStartLine) {
     $boris->onStart($onStartLine);
 }
+
+$boris->setLocal('cust', function ($id) { return \DataFactory::get_sprint_3c_searcher()->find_by_id($id); });
+$boris->setLocal('inv', function ($id) { return \DataFactory::get_inventory_searcher()->find_by_id($id); });
+
+$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+$_SERVER['REQUEST_URI'] = '/';
+$boris->setLocal('$_SERVER', array(
+    'REMOTE_ADDR' => '127.0.0.1',
+    'REQUEST_URI' => '/',
+));
+$boris->onStart(function($worker, $vars){
+    $worker->setLocal('$_SERVER', array(
+        'REMOTE_ADDR' => '127.0.0.1',
+        'REQUEST_URI' => '/',
+    ));
+});
 
 $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 
