@@ -51,17 +51,16 @@ $boris->onStart(function($worker, $vars){
 
 
 // Logic for emulating web-based requirements
-$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-$_SERVER['REQUEST_URI'] = '/';
-$boris->setLocal('$_SERVER', array(
+$webAdditions = array(
+    'APP_ID' => $appId,
     'REMOTE_ADDR' => '127.0.0.1',
     'REQUEST_URI' => '/',
-));
-$boris->onStart(function($worker, $vars){
-    $worker->setLocal('$_SERVER', array(
-        'REMOTE_ADDR' => '127.0.0.1',
-        'REQUEST_URI' => '/',
-    ));
+);
+
+$_SERVER = array_merge($_SERVER, $webAdditions);
+$boris->setLocal('$_SERVER', $webAdditions);
+$boris->onStart(function ($worker, $vars) use ($webAdditions) {
+    $worker->setLocal('$_SERVER', $webAdditions);
 });
 
 
