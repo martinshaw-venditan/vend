@@ -13,8 +13,8 @@
     },
     "autoload": {
         "psr-0": {
-            "Boris": "lib/Boris",
-            "Vend": "lib/Vend"
+            "Boris": "lib",
+            "Vend": "lib"
         }
     },
     "minimum-stability": "dev",
