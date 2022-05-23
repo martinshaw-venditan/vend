@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc04ad59-1240-4816-91c2-f9cb23bc5039" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/vend" beforeDir="false" afterPath="$PROJECT_DIR$/bin/vend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653321889353</updated>
-      <workItem from="1653321890573" duration="7393000" />
+      <workItem from="1653321890573" duration="7999000" />
     </task>
     <task id="LOCAL-00001" summary="initial changes">
       <created>1653321952269</created>
@@ -226,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653331953155</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add constants">
+      <created>1653331975801</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1653331975801</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,9 +259,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add constants" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2" timestamp="1653331954218">
+    <state x="476" y="309" key="Vcs.Push.Dialog.v2" timestamp="1653331976560">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653331954218" />
+    <state x="476" y="309" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653331976560" />
+    <state x="578" y="327" width="597" height="490" key="find.popup" timestamp="1653332202721">
+      <screen x="0" y="25" width="1753" height="1095" />
+    </state>
+    <state x="578" y="327" width="597" height="490" key="find.popup/0.25.1753.1095@0.25.1753.1095" timestamp="1653332202721" />
+    <state x="541" y="269" width="670" height="676" key="search.everywhere.popup" timestamp="1653332003081">
+      <screen x="0" y="25" width="1753" height="1095" />
+    </state>
+    <state x="541" y="269" width="670" height="676" key="search.everywhere.popup/0.25.1753.1095@0.25.1753.1095" timestamp="1653332003081" />
   </component>
 </project>

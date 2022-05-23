@@ -7,13 +7,15 @@ if (!function_exists('pcntl_signal')) {
     die("PCNTL support seems to be missing or disabled. See https://github.com/d11wtq/boris/issues/29 for details\n");
 }
 
-$boris = new \Boris\Boris('vend on ' . gethostname() . ' using Sigma > ');
+if (count($argv) <> 2) {
+    echo 'Need to provide an App ID (e.g. Sigma) as CLI argument when running vend' . PHP_EOL;
+    exit(0);
+}
+$appId = $argv[1];
+
+$boris = new \Boris\Boris('vend on ' . gethostname() . ' using ' . $appId . ' > ');
 $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 
-//if (empty($argv)) {
-//    echo 'Need to provide an App ID (e.g. Sigma) as CLI argument when running vend' . PHP_EOL;
-//    exit(0);
-//}
 $boris->onStart(function($worker, $vars){
     $worker->setLocal('$_SERVER', array(
         'REMOTE_ADDR' => '127.0.0.1',
@@ -26,8 +28,8 @@ $onStartLines = array(
 //    "register_shutdown_function('nice_php_shutdown');",
 
 //    'define(\'DOCNET_APP_ID\', !empty($_SERVER[\'DEFAULT_APP_ID\']) ? $_SERVER[\'DEFAULT_APP_ID\'] : \'Central\');',
-//    'define(\'DOCNET_APP_ID\', \'' . $argv[0] . '\');',
-    'define(\'DOCNET_APP_ID\', \'Sigma\');',
+    'define(\'DOCNET_APP_ID\', \'' . $appId . '\');',
+//    'define(\'DOCNET_APP_ID\', \'Sigma\');',
     "require_once('/app/vc-local/custom/admin_html/_shared.php');",
     "require_once('/app/vc-local/custom/config/base-config.php');",
     "require_once('/app/vc-local/custom/config/app_and_db.php');",
