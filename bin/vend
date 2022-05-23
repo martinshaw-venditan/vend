@@ -15,9 +15,16 @@ $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 //});
 //$boris->onStart('echo "The date is $date\n";');
 $onStartLines = array(
+    "error_reporting(E_ALL ^ E_NOTICE);",
+//    "register_shutdown_function('nice_php_shutdown');",
+
     "require_once('/app/vc-local/custom/admin_html/_shared.php');",
-    "require_once('/app/vc-local/custom/config/base-config.php');"
+    "require_once('/app/vc-local/custom/config/base-config.php');",
+
+    "Init::init_admin_index();",
+    "SprintRegistry::get()->get_uow()->commit();",
 );
+
 foreach ($onStartLines as $onStartLine) {
     $boris->onStart($onStartLine);
 }
