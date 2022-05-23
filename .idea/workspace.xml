@@ -10,13 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc04ad59-1240-4816-91c2-f9cb23bc5039" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Vend/VenditanCommerceOutputInspector.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Vend/VenditanCommerceOutputInspector.php" afterDir="false" />
-    </list>
+    <list default="true" id="dc04ad59-1240-4816-91c2-f9cb23bc5039" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653321889353</updated>
       <workItem from="1653321890573" duration="8342000" />
-      <workItem from="1653333193588" duration="927000" />
+      <workItem from="1653333193588" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="initial changes">
       <created>1653321952269</created>
@@ -246,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653332588080</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Improve use of PSR0">
+      <created>1653334247118</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1653334247119</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,13 +270,14 @@
     <MESSAGE value="customisations" />
     <MESSAGE value="Add getcwd" />
     <MESSAGE value="Add constants" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add constants" />
+    <MESSAGE value="Improve use of PSR0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve use of PSR0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2" timestamp="1653332588999">
+    <state x="476" y="309" key="Vcs.Push.Dialog.v2" timestamp="1653334248775">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653332588999" />
+    <state x="476" y="309" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653334248775" />
     <state x="578" y="327" width="597" height="490" key="find.popup" timestamp="1653332202721">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
