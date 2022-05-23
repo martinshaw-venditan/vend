@@ -14,9 +14,12 @@ $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 //    echo 'Need to provide an App ID (e.g. Sigma) as CLI argument when running vend' . PHP_EOL;
 //    exit(0);
 //}
-//$boris->onStart(function($worker, $vars){
-//    $worker->setLocal('date', date('Y-m-d'));
-//});
+$boris->onStart(function($worker, $vars){
+    $worker->setLocal('$_SERVER', array(
+        'REMOTE_ADDR' => '127.0.0.1',
+        'REQUEST_URI' => '/',
+    ));
+});
 //$boris->onStart('echo "The date is $date\n";');
 $onStartLines = array(
 //    "error_reporting(E_ALL ^ E_NOTICE);",
