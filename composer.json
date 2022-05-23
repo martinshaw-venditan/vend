@@ -16,5 +16,6 @@
             "Boris": "lib"
         }
     },
+    "minimum-stability": "dev",
     "bin": ["bin/vend"]
 }
