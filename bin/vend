@@ -5,7 +5,8 @@ require_once __DIR__ . '/../lib/autoload.php';
 
 // Error handling / validation
 if (!function_exists('pcntl_signal')) {
-    die("PCNTL support seems to be missing or disabled. See https://github.com/d11wtq/boris/issues/29 for details\n");
+    echo 'PCNTL support seems to be missing or disabled. See https://github.com/d11wtq/boris/issues/29 for details' . PHP_EOL;
+    exit(1);
 }
 
 if (count($argv) <> 2) {
@@ -35,14 +36,14 @@ foreach ($onStartLines as $onStartLine) {
 
 // Convenience methods for customers (3c) and inventory
 $boris->onStart(function($worker, $vars){
-    $worker->setLocal('c', function($id) {
-        return \DataFactory::get_sprint_3c_searcher()->find_by_id($id);
+    $worker->setLocal('c', function($customerId) {
+        return \DataFactory::get_sprint_3c_searcher()->find_by_id($customerId);
     });
-    $worker->setLocal('i', function($id) {
-        return \DataFactory::get_inventory_searcher()->find_by_id($id);
+    $worker->setLocal('i', function($inventoryId) {
+        return \DataFactory::get_inventory_searcher()->find_by_id($inventoryId);
     });
-    $worker->setLocal('o', function($id) {
-        return \DataFactory::get_order_searcher()->find_by_id($id);
+    $worker->setLocal('o', function($orderId) {
+        return \DataFactory::get_order_searcher()->find_by_id($orderId);
     });
     $worker->setLocal('oByC', function($customerId) {
         return \DataFactory::get_order_searcher()->add_filter_customer_id($customerId)->get_objects();

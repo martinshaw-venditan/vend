@@ -11,8 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc04ad59-1240-4816-91c2-f9cb23bc5039" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/vend" beforeDir="false" afterPath="$PROJECT_DIR$/bin/vend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1653321889353</updated>
       <workItem from="1653321890573" duration="8342000" />
-      <workItem from="1653333193588" duration="9056000" />
+      <workItem from="1653333193588" duration="9096000" />
+      <workItem from="1653348026350" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="initial changes">
       <created>1653321952269</created>
@@ -405,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653341243324</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Add known issues to README.md">
+      <created>1653347980517</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1653347980517</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,17 +447,18 @@
     <MESSAGE value="Add orders by customer convenience function" />
     <MESSAGE value="Update READMD.md" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Add known issues to README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add known issues to README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="385" y="208" key="SettingsEditor" timestamp="1653338540779">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
     <state x="385" y="208" key="SettingsEditor/0.25.1753.1095@0.25.1753.1095" timestamp="1653338540779" />
-    <state x="163" y="304" key="Vcs.Push.Dialog.v2" timestamp="1653341244668">
+    <state x="163" y="304" key="Vcs.Push.Dialog.v2" timestamp="1653347985213">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
-    <state x="163" y="304" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653341244668" />
+    <state x="163" y="304" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653347985213" />
     <state x="578" y="327" width="597" height="490" key="find.popup" timestamp="1653335991715">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
