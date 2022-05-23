@@ -14,7 +14,13 @@ $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 //    $worker->setLocal('date', date('Y-m-d'));
 //});
 //$boris->onStart('echo "The date is $date\n";');
-$boris->onStart('echo getcwd();');
+$onStartLines = array(
+    "require_once('/app/vc-local/custom/admin_html/_shared.php');",
+    "require_once('/app/vc-local/custom/config/base-config.php');"
+);
+foreach ($onStartLines as $onStartLine) {
+    $boris->onStart($onStartLine);
+}
 
 $config = new \Boris\Config();
 $config->apply($boris);
