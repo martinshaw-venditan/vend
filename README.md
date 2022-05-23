@@ -27,3 +27,8 @@ You can use the following convenience methods to load the relevant domain object
 `$oByC(3145149);` will load an array containing all Order objects associated with the customer ID of 3145149.
 
 _Use of useLocal inspired by https://www.sitepoint.com/say-hello-to-boris-a-better-repl-for-php/ and https://github.com/borisrepl/boris/wiki/Basic-Usage_
+
+## Known issues
+
+* It really messes with the line / max-width formatting of my terminal (iTerm 2 & PHPStorm terminal).
+* Because I am using Composer run-script as a shorthand for executing Vend script within the VC project, it is causing timeout after 300 seconds of lack of user input into /dev/tty.  
