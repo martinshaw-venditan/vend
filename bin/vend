@@ -24,7 +24,7 @@ $boris->onStart(function($worker, $vars){
 });
 //$boris->onStart('echo "The date is $date\n";');
 $onStartLines = array(
-//    "error_reporting(E_ALL ^ E_NOTICE);",
+    "error_reporting(E_ALL);",
 //    "register_shutdown_function('nice_php_shutdown');",
 
 //    'define(\'DOCNET_APP_ID\', !empty($_SERVER[\'DEFAULT_APP_ID\']) ? $_SERVER[\'DEFAULT_APP_ID\'] : \'Central\');',
