@@ -10,21 +10,21 @@ if (!function_exists('pcntl_signal')) {
 $boris = new \Boris\Boris('vend on ' . gethostname() . ' > ');
 $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 
-if (empty($argv)) {
-    echo 'Need to provide an App ID (e.g. Sigma) as CLI argument when running vend' . PHP_EOL;
-    exit(0);
-}
+//if (empty($argv)) {
+//    echo 'Need to provide an App ID (e.g. Sigma) as CLI argument when running vend' . PHP_EOL;
+//    exit(0);
+//}
 //$boris->onStart(function($worker, $vars){
 //    $worker->setLocal('date', date('Y-m-d'));
 //});
-echo $argv[0];
 //$boris->onStart('echo "The date is $date\n";');
 $onStartLines = array(
 //    "error_reporting(E_ALL ^ E_NOTICE);",
 //    "register_shutdown_function('nice_php_shutdown');",
 
 //    'define(\'DOCNET_APP_ID\', !empty($_SERVER[\'DEFAULT_APP_ID\']) ? $_SERVER[\'DEFAULT_APP_ID\'] : \'Central\');',
-    'define(\'DOCNET_APP_ID\', \'' . $argv[0] . '\');',
+//    'define(\'DOCNET_APP_ID\', \'' . $argv[0] . '\');',
+    'define(\'DOCNET_APP_ID\', \'Sigma\');',
     "require_once('/app/vc-local/custom/admin_html/_shared.php');",
     "require_once('/app/vc-local/custom/config/base-config.php');",
     "require_once('/app/vc-local/custom/config/app_and_db.php');",
