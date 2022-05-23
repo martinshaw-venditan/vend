@@ -26,3 +26,4 @@ You can use the following convenience methods to load the relevant domain object
 
 `$oByC(3145149);` will load an array containing all Order objects associated with the customer ID of 3145149.
 
+_Use of useLocal inspired by https://www.sitepoint.com/say-hello-to-boris-a-better-repl-for-php/ and https://github.com/borisrepl/boris/wiki/Basic-Usage_
