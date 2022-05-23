@@ -16,12 +16,23 @@ $appId = $argv[1];
 $boris = new \Boris\Boris('vend on ' . gethostname() . ' using ' . $appId . ' > ');
 $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 
+$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+$_SERVER['REQUEST_URI'] = '/';
+$boris->setLocal('$_SERVER', array(
+    'REMOTE_ADDR' => '127.0.0.1',
+    'REQUEST_URI' => '/',
+));
 $boris->onStart(function($worker, $vars){
     $worker->setLocal('$_SERVER', array(
         'REMOTE_ADDR' => '127.0.0.1',
         'REQUEST_URI' => '/',
     ));
 });
+
+$boris->setLocal('inv', function ($id) {
+    return \DataFactory::get_sprint_3c_searcher()->find_by_id($id);
+});
+
 //$boris->onStart('echo "The date is $date\n";');
 $onStartLines = array(
     "error_reporting(E_ALL);",

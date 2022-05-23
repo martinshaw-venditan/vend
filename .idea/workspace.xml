@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc04ad59-1240-4816-91c2-f9cb23bc5039" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/vend" beforeDir="false" afterPath="$PROJECT_DIR$/bin/vend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653321889353</updated>
       <workItem from="1653321890573" duration="8342000" />
-      <workItem from="1653333193588" duration="1547000" />
+      <workItem from="1653333193588" duration="2737000" />
     </task>
     <task id="LOCAL-00001" summary="initial changes">
       <created>1653321952269</created>
@@ -256,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653334491515</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Improve use of PSR0">
+      <created>1653334824199</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1653334824199</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,14 +291,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Improve use of PSR0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2" timestamp="1653334494439">
+    <state x="163" y="304" key="Vcs.Push.Dialog.v2" timestamp="1653334827321">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653334494439" />
-    <state x="578" y="327" width="597" height="490" key="find.popup" timestamp="1653332202721">
+    <state x="163" y="304" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653334827321" />
+    <state x="578" y="327" width="597" height="490" key="find.popup" timestamp="1653335991715">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
-    <state x="578" y="327" width="597" height="490" key="find.popup/0.25.1753.1095@0.25.1753.1095" timestamp="1653332202721" />
+    <state x="578" y="327" width="597" height="490" key="find.popup/0.25.1753.1095@0.25.1753.1095" timestamp="1653335991715" />
     <state x="541" y="269" width="670" height="676" key="search.everywhere.popup" timestamp="1653332003081">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
