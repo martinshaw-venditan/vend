@@ -38,8 +38,8 @@ foreach ($onStartLines as $onStartLine) {
 }
 
 $boris->onStart(function($worker, $vars){
-    $worker->setLocal('_c', \DataFactory::get_sprint_3c_searcher());
-    $worker->setLocal('_i', \DataFactory::get_inventory_searcher());
+    $worker->setLocal('_c', function() { return \DataFactory::get_sprint_3c_searcher(); });
+    $worker->setLocal('_i', function() { return \DataFactory::get_inventory_searcher(); });
 });
 
 $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
