@@ -7,7 +7,16 @@ if (!function_exists('pcntl_signal')) {
     die("PCNTL support seems to be missing or disabled. See https://github.com/d11wtq/boris/issues/29 for details\n");
 }
 
-$boris = new \Boris\Boris();
+$boris = new \Boris\Boris('vend on ' . gethostname() . ' >');
+$boris->onStart(function ($worker, $variables) {
+    //
+});
+
+$boris->onStart(function($worker, $vars){
+    $worker->setLocal('date', date('Y-m-d'));
+});
+
+$boris->onStart('echo "The date is $date\n";');
 
 $config = new \Boris\Config();
 $config->apply($boris);

@@ -11,7 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc04ad59-1240-4816-91c2-f9cb23bc5039" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/boris" beforeDir="false" afterPath="$PROJECT_DIR$/bin/vend" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +32,28 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/d11wtq/boris" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
   </component>
   <component name="ProjectId" id="29ZY5Bi0VTh2rIzg5yjE83QH07R" />
@@ -51,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653321889353</updated>
-      <workItem from="1653321890573" duration="276000" />
+      <workItem from="1653321890573" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="initial changes">
       <created>1653321952269</created>
@@ -60,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653321952269</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial changes">
+      <created>1653322183887</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653322183887</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial changes">
+      <created>1653322197958</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653322197958</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,9 +121,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial changes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2" timestamp="1653321953653">
+    <state x="476" y="309" key="Vcs.Push.Dialog.v2" timestamp="1653322199473">
       <screen x="0" y="25" width="1753" height="1095" />
     </state>
-    <state x="476" y="309" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653321953653" />
+    <state x="476" y="309" key="Vcs.Push.Dialog.v2/0.25.1753.1095@0.25.1753.1095" timestamp="1653322199473" />
   </component>
 </project>
