@@ -14,6 +14,7 @@ $boris->setInspector(new \Vend\VenditanCommerceOutputInspector);
 //    $worker->setLocal('date', date('Y-m-d'));
 //});
 //$boris->onStart('echo "The date is $date\n";');
+$boris->onStart('echo getcwd();');
 
 $config = new \Boris\Config();
 $config->apply($boris);
