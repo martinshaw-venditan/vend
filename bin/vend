@@ -18,6 +18,7 @@ $onStartLines = array(
 //    "error_reporting(E_ALL ^ E_NOTICE);",
 //    "register_shutdown_function('nice_php_shutdown');",
 
+    'define(\'DOCNET_APP_ID\', !empty($_SERVER[\'DEFAULT_APP_ID\']) ? $_SERVER[\'DEFAULT_APP_ID\'] : \'Central\');',
     "require_once('/app/vc-local/custom/admin_html/_shared.php');",
     "require_once('/app/vc-local/custom/config/base-config.php');",
     "require_once('/app/vc-local/custom/config/app_and_db.php');",
