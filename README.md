@@ -32,3 +32,4 @@ _Use of useLocal inspired by https://www.sitepoint.com/say-hello-to-boris-a-bett
 
 * It really messes with the line / max-width formatting of my terminal (iTerm 2 & PHPStorm terminal).
 * Because I am using Composer run-script as a shorthand for executing Vend script within the VC project, it is causing timeout after 300 seconds of lack of user input into /dev/tty.  
+    * This can be fixed by making Vend a package which is required system-globally rather than making changes to the VC repo, after this change, I will be able to run `vend Sigma` regardless of which directory I am in because I am affecting the docker container by its name and not the VC code.
